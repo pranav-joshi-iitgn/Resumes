@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    urlcolor=blue!60!black
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, topsep=3pt, parsep=0pt}
+
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}{}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+\newcommand{\entryheader}[4]{
+  \textbf{#1} \hfill \textit{#2} \\
+  \textit{#3} \hfill #4 \vspace{2pt}
+}
+
+\newcommand{\projectheader}[3]{
+  \textbf{#1} $\vert{}$ \textit{#2} \hfill \textit{#3} \vspace{2pt}
+}
+
+\begin{document}
+
+% -------------------- HEADER --------------------
+\begin{center}
+    {\LARGE \textbf{Pranav Joshi}} \\[4pt]
+    \href{mailto:pranav.joshi@alumni.iitgn.ac.in}{pranav.joshi@alumni.iitgn.ac.in} $\vert{}$
+    \href{mailto:pranavajoshi04@gmail.com}{pranavajoshi04@gmail.com} $\vert{}$
+    +91 8698955551 \\[2pt]
+    \href{https://github.com/pranav-joshi-iitgn}{GitHub} $\vert{}$
+    \href{https://www.linkedin.com/in/pranav-joshi-77487b232}{LinkedIn} $\vert{}$
+    \href{https://pranavjoshiiitgn.notion.site/54b8560288a346d39574e2b4cd6959ad?v=12b71196f4794d6485295473ab547e0f}{Academic Portfolio} $\vert{}$
+    \href{https://medium.com/@pranav.joshi_16395}{Medium}
+\end{center}
+
+\vspace{2pt}
+Engineer and researcher specializing in FPGA hardware acceleration, ultrasonic image reconstruction, real-time signal processing, and statistical modeling. 
+Proven expertise in deriving and implementing mathematical and hardware-software co-design frameworks; from high-throughput beamforming architectures to physiological time-series modeling.
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+\textbf{Bachelor of Technology in Computer Science and Engineering} \hfill \textbf{Graduated: July 2026} \\
+\textit{Indian Institute of Technology Gandhinagar (IITGN)} \hfill \textit{CGPA: 9.59 / 10} \\
+\textbf{\href{https://pranavjoshiiitgn.notion.site/54b8560288a346d39574e2b4cd6959ad?v=12b71196f4794d6485295473ab547e0f}{Relevant Coursework}:} Signals \& Systems, Digital Systems, Computer Architecture, Computer Vision, Machine Learning, Data Science, Biostatistics, Computational Physics, Databases.
+
+% -------------------- PUBLICATIONS & POSTERS --------------------
+\section{Publications, Posters \& Preprints}
+\begin{itemize}
+    \item \textbf{Pranav Joshi}, Abhilipsa Sahoo, Joycee Mekie and Himanshu Shekhar, ``Novel Transducer Domain Partitioning Architecture for FPGA-Based Total Focusing Method Ultrasonic Imaging'', \textit{Accepted Poster at IEEE Symposium on Acoustic and Ultrasonic Systems (IEEE SAUS)}, 2026. \textit{(Full manuscript in preparation)}.
+    \item \textbf{\href{https://arxiv.org/abs/2507.10019}{Pranav Joshi, ``Sampling-Based Estimation of Jaccard Containment and Similarity''}}, \textit{arXiv preprint arXiv:2507.10019}, 2025.
+    \item \textbf{Pranav Joshi} and Ashutosh Srivastava, ``Characterizing Social Jet-Lag Dynamics from Consumer Wearables'', \textit{Manuscript in preparation, Computational Biology Lab (CLOCK), IITGN}, 2026.
+\end{itemize}
+
+% -------------------- RESEARCH & PROFESSIONAL EXPERIENCE --------------------
+\section{Research \& Professional Experience}
+
+\entryheader{Independent Research: Co-Evolutionary Optimization for Sparse-Array TFM}{Ongoing}{Hardware-Friendly Ultrasonic Beamforming \& Design Space Exploration}{}
+\begin{itemize}
+    \item Developing a time-complexity optimized Cooperative Coevolutionary Genetic Algorithm (CCGA) to jointly evolve sparse transducer array layouts and non-linear partial-image activation functions.
+    \item Replacing resource-heavy $p^{\text{th}}$-root and $p^{\text{th}}$-power coherence operations with learned symbolic and linear regression models over FPGA-implementable basis functions to amplify constructive interference and suppress noise with minimal LUT/DSP overhead.
+\end{itemize}
+
+\vspace{4pt}
+\entryheader{FPGA Research Contractor}{May -- July 2026}{MUSE Lab, IIT Gandhinagar}{Gandhinagar, India}
+\begin{itemize}
+    \item Ramped up on ultrasound beamforming theory and background material; documented learnings in a comprehensive \href{https://pranav-joshi-iitgn.github.io/Medical_Imaging_Blog/}{Medical Imaging Systems Blog}
+    \item Synthesized and implemented an end-to-end Total Focusing Method (TFM) hardware accelerator for Non-Destructive Testing (NDT) ultrasonic imaging on Nexys 4 DDR and Xilinx AC701 FPGA boards.
+    \item Achieved real-time reconstruction at \textbf{30 fps for a $128 \times 128$ pixel grid} on a single FPGA via novel transducer domain partitioning, dynamic programming, deep pipelining, and AXI-stream batching.
+    \item Developed a simulation and reconstruction library featuring Software-Assisted Configuration, storing pre-computed delay laws in DDR3 memory to bypass on-chip CORDIC latency and support complex acoustic geometries (e.g., angled wedges).
+    \item Engineered a custom link-layer protocol over RMII/RGMII Ethernet to minimize OS context-switching overhead.
+    \item Completed technology transfer to industry partner \href{https://modsonic.com/}{Modsonic Instruments Manufacturing Co. Pvt. Ltd.}
+\end{itemize}
+
+\vspace{4pt}
+\entryheader{Research Intern}{May -- June 2026}{Computational Biology Lab (CLOCK), IIT Gandhinagar}{Gandhinagar, India}
+\begin{itemize}
+    \item \textbf{Physiological Signal Conditioning:} Proposed a statistical framework to quantify intra-individual Social Jet-Lag (SJL) from high-granularity wearable sensor streams (Ultrahuman). Engineered an unsupervised pipeline using 2D histograms, $k$-means clustering, and unpaired $t$-tests to isolate and filter firmware-induced motion artifacts in Heart Rate (HR) and Heart Rate Variability (HRV).
+    \item \textbf{Metric Formulation:} Formulated the Heart-Rate-Autocorrelation (HRA) metric and burstiness index to characterize acute SJL events, controlling for confounding variables via Ordinary Least Squares (OLS) regression and validating superiority over traditional Sleep Midpoint tracking.
+    \item \textbf{Time-Series Forecasting:} Implemented a Cosinor autoregressive harmonic regression model to extract circadian phase/amplitude parameters, and benchmarked it against a custom multi-modal Transformer architecture for forecasting physiological trajectories.
+\end{itemize}
+
+\vspace{4pt}
+\entryheader{Data Engineer (July 2026 -- Present) \& Data Intern (May -- July 2025)}{May 2025 -- Present}{Texas Instruments}{Bengaluru, India}
+\begin{itemize}
+    \item \textbf{AI-Assisted Hardware System Design (Data Engineer):} Developing AI-driven Block Diagram generation tools for \texttt{ti.com} to automate component selection and accelerate high-level end-equipment architecture design.
+    \item \textbf{Large-Scale Statistical Retrieval (Data Intern):} Engineered a metadata-free Retrieval-Augmented Generation (RAG) and multi-agent Text-to-SQL pipeline scaling across thousands of columns and $\sim 10^9$ data points in enterprise Oracle databases. Overcoming rate-limited schema matching directly motivated the mathematical formulation of the arXiv Jaccard Containment estimator.
+    \item \textbf{Recognition:} Awarded a Pre-Placement Offer (PPO) for outstanding performance during the internship, leading to the current Data Engineer role.
+\end{itemize}
+
+% -------------------- SELECTED ACADEMIC PROJECTS --------------------
+\section{Selected Academic Projects}
+
+\projectheader{\href{https://pranav-joshi-iitgn.github.io/PH509/}{Numerical Modeling \& Simulation of Wave and Dynamical Systems}}{PH509, IITGN}{2026}
+\begin{itemize}
+    \item Developed $\mathcal{O}(N)$ and $\mathcal{O}(MN)$ Time-Dependent Schr\"{o}dinger Equation (TDSE) wave-propagation solvers using Split-Operator and Alternating Direction Implicit (ADI) tridiagonal matrix methods.
+    \item Performed von Neumann stability analysis on Space-Discretized Leap-Frog (SDLF) schemes to prevent numerical divergence.
+    \item Built adaptive Position-Verlet Leapfrog integrators for 2-body orbital mechanics, verifying conservation laws.
+\end{itemize}
+
+\vspace{3pt}
+\projectheader{\href{https://github.com/pranav-joshi-iitgn/YajatProject}{Person Velocity Estimation via Projective Geometry \& Computer Vision}}{IITGN}{2024}
+\begin{itemize}
+    \item Integrated YOLO-based object and head tracking pipelines with native projective geometry homography transformations in OpenCV to estimate real-time physical velocity from monocular video feeds.
+\end{itemize}
+
+\vspace{3pt}
+\projectheader{\href{https://github.com/pranav-joshi-iitgn/ML_Journey}{Automatic Differentiation Engine \& Classical ML from Scratch}}{ES335, IITGN}{2023}
+\begin{itemize}
+    \item Engineered an automatic differentiation (autograd) engine supporting dynamic computational graphs, backpropagation, and modular neural network layers. 
+    \item Built custom decision tree and random forest ensembles driven by Shannon Entropy and RMSE minimization heuristics.
+\end{itemize}
+
+\vspace{3pt}
+\projectheader{\href{https://github.com/pranav-joshi-iitgn/Group}{Open Source Contributions to Computational Group Theory}}{IITGN}{Jan -- Jun 2024}
+\begin{itemize}
+    \item Collaborated with the author of two research papers on group-theoretic algorithms to implement algebraic routines in the GAP and SageMath symbolic computation ecosystems.
+\end{itemize}
+
+\vspace{3pt}
+\projectheader{Quantized Auto-Encoder Neural Network on FPGA}{Digital Systems, IITGN}{2023}
+\begin{itemize}
+    \item Designed and synthesized a feed-forward quantized auto-encoder neural network at the Register-Transfer Level (RTL) using SystemVerilog on an FPGA development board.
+\end{itemize}
+
+\vspace{3pt}
+\projectheader{\href{https://github.com/pranav-joshi-iitgn/AlgoLang}{AlgoLang: Custom Programming Language}}{IITGN}{Jan -- Apr 2025}
+\begin{itemize}
+    \item Engineered an end-to-end language toolchain comprising a recursive descent parser, lexical analyzer, and AST interpreter in Python for a dynamically typed, lexically scoped programming language.
+    \item Built a back-end compiler and custom assembler targeting the \textbf{MIPS32 Instruction Set Architecture (ISA)}, translating high-level control flow and arithmetic expressions into low-level machine code.
+    \item Implemented a lightweight Virtual Machine (VM) in C to execute compiled MIPS32 bytecode with custom memory management, register-file emulation, and an interactive shell interface.
+\end{itemize}
+
+% -------------------- AWARDS & ACHIEVEMENTS --------------------
+\section{Academic Awards \& Achievements}
+\begin{itemize}
+    \item \textbf{HackRush'25 Hackathon:} Winner in the Computer Architecture track (held at IITGN).
+    \item \textbf{Academic Excellence:} Dean's List for semesters 2, 4, 5, and 6.
+\end{itemize}
+
+% -------------------- TECHNICAL SKILLS --------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0pt, label={}]
+    \item \textbf{Hardware \& Systems:} Verilog, SystemVerilog, C, Vivado, AXI4, DDR3 (MIG), UART, Ethernet (RMII/RGMII), Timing Analysis, Clock Domain Crossing (CDC), BRAM.
+    \item \textbf{Scientific Computing \& ML:} Python, MATLAB, PyTorch, SciPy, NumPy, Pandas, OpenCV, SQL.
+    \item \textbf{Software Tools \& Publishing:} LaTeX, Pandoc Markdown, Jupyter, Git, Bash, PowerShell, SSH.
+\end{itemize}
+
+\end{document}
